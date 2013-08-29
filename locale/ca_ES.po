@@ -1,0 +1,27 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "jasper:stock.shipment.out.delivery_note:"
+msgid "Code"
+msgstr "Codi"
+
+msgctxt "jasper:stock.shipment.out.delivery_note:"
+msgid "Customer Code"
+msgstr "Codi client"
+
+msgctxt "jasper:stock.shipment.out.delivery_note:"
+msgid "Delivery Note"
+msgstr "Albarà"
+
+msgctxt "jasper:stock.shipment.out.delivery_note:"
+msgid "Description"
+msgstr "Descripció"
+
+msgctxt "jasper:stock.shipment.out.delivery_note:"
+msgid "Quantity"
+msgstr "Quantitat"
+
+msgctxt "jasper:stock.shipment.out.delivery_note:"
+msgid "Source document"
+msgstr "Document/s relacionat/s"

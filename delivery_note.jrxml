@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="delivery_note" language="i18ngroovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.3310000000000008"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="TRYTON_RELATIONS" value="[&apos;outgoing_moves&apos;]"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="TAXES_DS" class="java.lang.Object"/>
+	<queryString language="xPath">
+		<![CDATA[]]>
+	</queryString>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/id]]></fieldDescription>
+	</field>
+	<field name="company-logo" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/company-company/logo-logo]]></fieldDescription>
+	</field>
+	<field name="company-name" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/company-company/party-party/name-name]]></fieldDescription>
+	</field>
+	<field name="company-vat_number" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/company-company/party-party/vat_number-vat_number]]></fieldDescription>
+	</field>
+	<field name="company-phone" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/company-company/party-party/phone-phone]]></fieldDescription>
+	</field>
+	<field name="company-email" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/company-company/party-party/email-email]]></fieldDescription>
+	</field>
+	<field name="company-zip" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/company-company/party-party/addresses-addresses/zip-zip]]></fieldDescription>
+	</field>
+	<field name="company-street" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/company-company/party-party/addresses-addresses/street-street]]></fieldDescription>
+	</field>
+	<field name="company-city" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/company-company/party-party/addresses-addresses/city-city]]></fieldDescription>
+	</field>
+	<field name="company-country" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/company-company/party-party/addresses-addresses/country-country/name-name]]></fieldDescription>
+	</field>
+	<field name="company-header" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/company-company/header-header]]></fieldDescription>
+	</field>
+	<field name="company-footer" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/company-company/footer-footer]]></fieldDescription>
+	</field>
+	<field name="reference-reference" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/reference-reference]]></fieldDescription>
+	</field>
+	<field name="state-state" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/state-state]]></fieldDescription>
+	</field>
+	<field name="code-code" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/outgoing_moves-outgoing_moves/product-product/code-code]]></fieldDescription>
+	</field>
+	<field name="rec_name-rec_name" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/outgoing_moves-outgoing_moves/product-product/rec_name-rec_name]]></fieldDescription>
+	</field>
+	<field name="quantity-quantity" class="java.lang.Number">
+		<fieldDescription><![CDATA[/data/record/outgoing_moves-outgoing_moves/quantity-quantity]]></fieldDescription>
+	</field>
+	<field name="full_name-full_name" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/customer-customer/full_name-full_name]]></fieldDescription>
+	</field>
+	<field name="customer-lang" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/customer-customer/lang-lang/code-code]]></fieldDescription>
+	</field>
+	<field name="customer-code" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/customer-customer/code-code]]></fieldDescription>
+	</field>
+	<field name="full_address-full_address" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/customer-customer/addresses-addresses/full_address-full_address]]></fieldDescription>
+	</field>
+	<field name="full_address-full_address2" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/delivery_address-delivery_address/full_address-full_address]]></fieldDescription>
+	</field>
+	<field name="effective_date-effective_date" class="java.util.Date">
+		<fieldDescription><![CDATA[/data/record/effective_date-effective_date]]></fieldDescription>
+	</field>
+	<field name="origin-origin" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/origin-origin]]></fieldDescription>
+	</field>
+	<variable name="L" class="java.util.Locale">
+		<variableExpression><![CDATA[$F{customer-lang} != null && $F{customer-lang}.length() == 5 ? new Locale($F{customer-lang}.substring(0,2)) : ( $F{customer-lang} != null && $F{customer-lang}.length() == 2 ? new Locale($F{customer-lang}.substring(0,2)) : 'en')]]></variableExpression>
+		<initialValueExpression><![CDATA[$F{customer-lang} != null && $F{customer-lang}.length() == 5 ? new Locale($F{customer-lang}.substring(0,2)) : ( $F{customer-lang} != null && $F{customer-lang}.length() == 2 ? new Locale($F{customer-lang}.substring(0,2)) : 'en' )]]></initialValueExpression>
+	</variable>
+	<group name="Sale" isStartNewPage="true" isResetPageNumber="true">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+		<groupHeader>
+			<band height="287">
+				<textField>
+					<reportElement x="264" y="139" width="274" height="15"/>
+					<textElement>
+						<font size="9" isBold="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{full_name-full_name}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="177" y="272" width="148" height="12"/>
+					<textElement>
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[tr($V{L},"Description")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="113" y="272" width="50" height="12"/>
+					<textElement textAlignment="Left">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[tr($V{L},"Quantity")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="264" y="154" width="274" height="51"/>
+					<textElement>
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{full_address-full_address}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="264" y="205" width="274" height="1"/>
+				</line>
+				<textField>
+					<reportElement x="264" y="221" width="274" height="46"/>
+					<textElement>
+						<font size="9" isBold="false"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{full_address-full_address2}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="10" y="138" width="228" height="21" forecolor="#010101">
+						<printWhenExpression><![CDATA[$F{reference-reference} != '']]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Left">
+						<font size="16" isBold="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[tr($V{L},"Delivery Note")+" Nº "+$F{reference-reference}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="10" y="160" width="228" height="12">
+						<printWhenExpression><![CDATA[$F{effective_date-effective_date} != null]]></printWhenExpression>
+					</reportElement>
+					<textElement>
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[tr($V{L},"Date")+": "+new SimpleDateFormat("dd'-'MM'-'yyyy").format($F{effective_date-effective_date})]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="10" y="285" width="530" height="1"/>
+				</line>
+				<textField>
+					<reportElement x="264" y="209" width="274" height="15"/>
+					<textElement>
+						<font size="9" isBold="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[tr($V{L},"Shipment Address")]]></textFieldExpression>
+				</textField>
+				<image>
+					<reportElement x="13" y="10" width="157" height="100" isRemoveLineWhenBlank="true"/>
+					<imageExpression class="java.lang.String"><![CDATA[$F{company-logo}]]></imageExpression>
+				</image>
+				<textField isStretchWithOverflow="true">
+					<reportElement x="10" y="111" width="535" height="10" isRemoveLineWhenBlank="true" forecolor="#808080"/>
+					<textElement textAlignment="Left">
+						<font size="7"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{company-header}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="10" y="173" width="228" height="12">
+						<printWhenExpression><![CDATA[$F{origin-origin}!= null]]></printWhenExpression>
+					</reportElement>
+					<textElement>
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[tr($V{L},"Source document")+": "+$F{origin-origin}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="13" y="272" width="75" height="12"/>
+					<textElement textAlignment="Left">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[tr($V{L},"Code")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="10" y="185" width="228" height="12">
+						<printWhenExpression><![CDATA[$F{customer-code}!= null]]></printWhenExpression>
+					</reportElement>
+					<textElement>
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[tr($V{L},"Customer Code")+": "+$F{customer-code}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="9" splitType="Prevent">
+				<line>
+					<reportElement x="10" y="1" width="530" height="1"/>
+				</line>
+			</band>
+		</groupFooter>
+	</group>
+	<columnHeader>
+		<band height="25">
+			<printWhenExpression><![CDATA[$V{PAGE_NUMBER} >1]]></printWhenExpression>
+			<line>
+				<reportElement x="10" y="24" width="530" height="1"/>
+			</line>
+			<textField>
+				<reportElement x="177" y="12" width="148" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[tr($V{L},"Description")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="12" width="50" height="12"/>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[tr($V{L},"Quantity")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="13" y="12" width="50" height="12"/>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[tr($V{L},"Code")]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement x="177" y="2" width="361" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{rec_name-rec_name}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0;-#,##0">
+				<reportElement x="113" y="2" width="50" height="12"/>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Number"><![CDATA[$F{quantity-quantity}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00">
+				<reportElement x="13" y="2" width="75" height="12"/>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{code-code}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="89" splitType="Stretch">
+			<rectangle>
+				<reportElement x="529" y="4" width="100" height="20" forecolor="#FEFEFE" backcolor="#A0A0A0"/>
+			</rectangle>
+			<textField>
+				<reportElement x="538" y="9" width="80" height="11" forecolor="#FCFCFC"/>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="10" y="6" width="304" height="11" forecolor="#010101"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{company-name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="29" width="304" height="11" forecolor="#808080"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{company-zip}+" "+$F{company-city}+" "+$F{company-country}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="17" width="304" height="11" forecolor="#808080"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{company-street}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="9" y="42" width="304" height="11" forecolor="#808080"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{company-vat_number}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="9" y="73" width="535" height="10" isRemoveLineWhenBlank="true" forecolor="#808080"/>
+				<textElement textAlignment="Center">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{company-footer}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="9" y="54" width="304" height="12" forecolor="#808080"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["T. "+ $F{company-phone}+" "+$F{company-email}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
