@@ -3,6 +3,10 @@ msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
 msgctxt "jasper:stock.shipment.out.delivery_note:"
+msgid "Carrier"
+msgstr "Mensajero"
+
+msgctxt "jasper:stock.shipment.out.delivery_note:"
 msgid "Code"
 msgstr "Código"
 

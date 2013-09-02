@@ -83,6 +83,9 @@
 	<field name="origin-origin" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/origin-origin]]></fieldDescription>
 	</field>
+	<field name="carrier-rec_name" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/carrier-carrier/rec_name-rec_name]]></fieldDescription>
+	</field>
 	<variable name="L" class="java.util.Locale">
 		<variableExpression><![CDATA[$F{customer-lang} != null && $F{customer-lang}.length() == 5 ? new Locale($F{customer-lang}.substring(0,2)) : ( $F{customer-lang} != null && $F{customer-lang}.length() == 2 ? new Locale($F{customer-lang}.substring(0,2)) : 'en')]]></variableExpression>
 		<initialValueExpression><![CDATA[$F{customer-lang} != null && $F{customer-lang}.length() == 5 ? new Locale($F{customer-lang}.substring(0,2)) : ( $F{customer-lang} != null && $F{customer-lang}.length() == 2 ? new Locale($F{customer-lang}.substring(0,2)) : 'en' )]]></initialValueExpression>
@@ -192,6 +195,15 @@
 						<font size="9"/>
 					</textElement>
 					<textFieldExpression class="java.lang.String"><![CDATA[tr($V{L},"Customer Code")+": "+$F{customer-code}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="10" y="197" width="228" height="12">
+						<printWhenExpression><![CDATA[$F{carrier-rec_name}!= null]]></printWhenExpression>
+					</reportElement>
+					<textElement>
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[tr($V{L},"Carrier")+": "+$F{carrier-rec_name}]]></textFieldExpression>
 				</textField>
 			</band>
 		</groupHeader>
