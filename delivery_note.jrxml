@@ -86,6 +86,9 @@
 	<field name="carrier-rec_name" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/carrier-carrier/rec_name-rec_name]]></fieldDescription>
 	</field>
+	<field name="comment-comment" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/comment-comment]]></fieldDescription>
+	</field>
 	<variable name="L" class="java.util.Locale">
 		<variableExpression><![CDATA[$F{customer-lang} != null && $F{customer-lang}.length() == 5 ? new Locale($F{customer-lang}.substring(0,2)) : ( $F{customer-lang} != null && $F{customer-lang}.length() == 2 ? new Locale($F{customer-lang}.substring(0,2)) : 'en')]]></variableExpression>
 		<initialValueExpression><![CDATA[$F{customer-lang} != null && $F{customer-lang}.length() == 5 ? new Locale($F{customer-lang}.substring(0,2)) : ( $F{customer-lang} != null && $F{customer-lang}.length() == 2 ? new Locale($F{customer-lang}.substring(0,2)) : 'en' )]]></initialValueExpression>
@@ -208,10 +211,17 @@
 			</band>
 		</groupHeader>
 		<groupFooter>
-			<band height="9" splitType="Prevent">
+			<band height="26" splitType="Prevent">
 				<line>
 					<reportElement x="10" y="1" width="530" height="1"/>
 				</line>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="10" y="9" width="528" height="13" isRemoveLineWhenBlank="true"/>
+					<textElement>
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{comment-comment}]]></textFieldExpression>
+				</textField>
 			</band>
 		</groupFooter>
 	</group>
