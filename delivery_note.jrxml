@@ -93,7 +93,7 @@
 		<variableExpression><![CDATA[$F{customer-lang} != null && $F{customer-lang}.length() == 5 ? new Locale($F{customer-lang}.substring(0,2)) : ( $F{customer-lang} != null && $F{customer-lang}.length() == 2 ? new Locale($F{customer-lang}.substring(0,2)) : 'en')]]></variableExpression>
 		<initialValueExpression><![CDATA[$F{customer-lang} != null && $F{customer-lang}.length() == 5 ? new Locale($F{customer-lang}.substring(0,2)) : ( $F{customer-lang} != null && $F{customer-lang}.length() == 2 ? new Locale($F{customer-lang}.substring(0,2)) : 'en' )]]></initialValueExpression>
 	</variable>
-	<group name="Sale" isStartNewPage="true" isResetPageNumber="true">
+	<group name="Shipment" isStartNewPage="true" isResetPageNumber="true">
 		<groupExpression><![CDATA[$F{id}]]></groupExpression>
 		<groupHeader>
 			<band height="287">
