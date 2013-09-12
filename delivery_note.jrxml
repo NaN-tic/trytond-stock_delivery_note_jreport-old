@@ -96,47 +96,47 @@
 	<group name="Shipment" isStartNewPage="true" isResetPageNumber="true">
 		<groupExpression><![CDATA[$F{id}]]></groupExpression>
 		<groupHeader>
-			<band height="287">
+			<band height="155">
 				<textField>
-					<reportElement x="264" y="139" width="274" height="15"/>
+					<reportElement x="264" y="8" width="274" height="15"/>
 					<textElement>
 						<font size="9" isBold="true"/>
 					</textElement>
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{full_name-full_name}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="177" y="272" width="148" height="12"/>
+					<reportElement x="177" y="141" width="148" height="12"/>
 					<textElement>
 						<font size="9"/>
 					</textElement>
 					<textFieldExpression class="java.lang.String"><![CDATA[tr($V{L},"Description")]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="113" y="272" width="50" height="12"/>
+					<reportElement x="113" y="141" width="50" height="12"/>
 					<textElement textAlignment="Left">
 						<font size="9"/>
 					</textElement>
 					<textFieldExpression class="java.lang.String"><![CDATA[tr($V{L},"Quantity")]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="264" y="154" width="274" height="51"/>
+					<reportElement x="264" y="23" width="274" height="51"/>
 					<textElement>
 						<font size="9"/>
 					</textElement>
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{full_address-full_address}]]></textFieldExpression>
 				</textField>
 				<line>
-					<reportElement x="264" y="205" width="274" height="1"/>
+					<reportElement x="264" y="74" width="274" height="1"/>
 				</line>
 				<textField>
-					<reportElement x="264" y="221" width="274" height="46"/>
+					<reportElement x="264" y="90" width="274" height="46"/>
 					<textElement>
 						<font size="9" isBold="false"/>
 					</textElement>
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{full_address-full_address2}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="10" y="138" width="228" height="21" forecolor="#010101">
+					<reportElement x="10" y="7" width="228" height="21" forecolor="#010101">
 						<printWhenExpression><![CDATA[$F{reference-reference} != '']]></printWhenExpression>
 					</reportElement>
 					<textElement textAlignment="Left">
@@ -145,7 +145,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[tr($V{L},"Delivery Note")+" Nº "+$F{reference-reference}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="10" y="160" width="228" height="12">
+					<reportElement x="10" y="29" width="228" height="12">
 						<printWhenExpression><![CDATA[$F{effective_date-effective_date} != null]]></printWhenExpression>
 					</reportElement>
 					<textElement>
@@ -154,28 +154,17 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[tr($V{L},"Date")+": "+new SimpleDateFormat("dd'-'MM'-'yyyy").format($F{effective_date-effective_date})]]></textFieldExpression>
 				</textField>
 				<line>
-					<reportElement x="10" y="285" width="530" height="1"/>
+					<reportElement x="10" y="154" width="530" height="1"/>
 				</line>
 				<textField>
-					<reportElement x="264" y="209" width="274" height="15"/>
+					<reportElement x="264" y="78" width="274" height="15"/>
 					<textElement>
 						<font size="9" isBold="true"/>
 					</textElement>
 					<textFieldExpression class="java.lang.String"><![CDATA[tr($V{L},"Shipment Address")]]></textFieldExpression>
 				</textField>
-				<image>
-					<reportElement x="13" y="10" width="157" height="100" isRemoveLineWhenBlank="true"/>
-					<imageExpression class="java.lang.String"><![CDATA[$F{company-logo}]]></imageExpression>
-				</image>
-				<textField isStretchWithOverflow="true">
-					<reportElement x="10" y="111" width="535" height="10" isRemoveLineWhenBlank="true" forecolor="#808080"/>
-					<textElement textAlignment="Left">
-						<font size="7"/>
-					</textElement>
-					<textFieldExpression class="java.lang.String"><![CDATA[$F{company-header}]]></textFieldExpression>
-				</textField>
 				<textField>
-					<reportElement x="10" y="173" width="228" height="12">
+					<reportElement x="10" y="42" width="228" height="12">
 						<printWhenExpression><![CDATA[$F{origin-origin}!= null]]></printWhenExpression>
 					</reportElement>
 					<textElement>
@@ -184,14 +173,14 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[tr($V{L},"Source document")+": "+$F{origin-origin}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="13" y="272" width="75" height="12"/>
+					<reportElement x="13" y="141" width="75" height="12"/>
 					<textElement textAlignment="Left">
 						<font size="9"/>
 					</textElement>
 					<textFieldExpression class="java.lang.String"><![CDATA[tr($V{L},"Code")]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="10" y="185" width="228" height="12">
+					<reportElement x="10" y="54" width="228" height="12">
 						<printWhenExpression><![CDATA[$F{customer-code}!= null]]></printWhenExpression>
 					</reportElement>
 					<textElement>
@@ -200,7 +189,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[tr($V{L},"Customer Code")+": "+$F{customer-code}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="10" y="197" width="228" height="12">
+					<reportElement x="10" y="66" width="228" height="12">
 						<printWhenExpression><![CDATA[$F{carrier-rec_name}!= null]]></printWhenExpression>
 					</reportElement>
 					<textElement>
@@ -225,35 +214,21 @@
 			</band>
 		</groupFooter>
 	</group>
-	<columnHeader>
-		<band height="25">
-			<printWhenExpression><![CDATA[$V{PAGE_NUMBER} >1]]></printWhenExpression>
-			<line>
-				<reportElement x="10" y="24" width="530" height="1"/>
-			</line>
-			<textField>
-				<reportElement x="177" y="12" width="148" height="12"/>
-				<textElement>
-					<font size="9"/>
-				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[tr($V{L},"Description")]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="113" y="12" width="50" height="12"/>
+	<pageHeader>
+		<band height="119">
+			<textField isStretchWithOverflow="true">
+				<reportElement x="10" y="106" width="528" height="10" isRemoveLineWhenBlank="true" forecolor="#808080"/>
 				<textElement textAlignment="Left">
-					<font size="9"/>
+					<font size="7"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[tr($V{L},"Quantity")]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{company-header}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement x="13" y="12" width="50" height="12"/>
-				<textElement textAlignment="Left">
-					<font size="9"/>
-				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[tr($V{L},"Code")]]></textFieldExpression>
-			</textField>
+			<image>
+				<reportElement x="10" y="5" width="157" height="100" isRemoveLineWhenBlank="true"/>
+				<imageExpression class="java.lang.String"><![CDATA[$F{company-logo}]]></imageExpression>
+			</image>
 		</band>
-	</columnHeader>
+	</pageHeader>
 	<detail>
 		<band height="15" splitType="Stretch">
 			<textField isStretchWithOverflow="true">
