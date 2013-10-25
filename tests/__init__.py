@@ -3,3 +3,5 @@
 #the full copyright notices and license terms.
 
 from .test_stock_delivery_note_jreport import suite
+
+__all__ = ['suite']
