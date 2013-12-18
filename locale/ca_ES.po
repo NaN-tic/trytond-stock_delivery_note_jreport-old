@@ -28,4 +28,4 @@ msgstr "Quantitat"
 
 msgctxt "jasper:stock.shipment.out.delivery_note:"
 msgid "Source document"
-msgstr "Document/s relacionat/s"
+msgstr "Document relacionat"
