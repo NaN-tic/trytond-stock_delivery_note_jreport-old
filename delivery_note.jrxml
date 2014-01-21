@@ -47,6 +47,9 @@
 	<field name="company-footer" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/company-company/footer-footer]]></fieldDescription>
 	</field>
+	<field name="company-shipment_qty" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/company-company/shipment_qty-shipment_qty]]></fieldDescription>
+	</field>
 	<field name="reference-reference" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/reference-reference]]></fieldDescription>
 	</field>
@@ -215,16 +218,16 @@
 		</groupFooter>
 	</group>
 	<pageHeader>
-		<band height="119">
+		<band height="82">
 			<textField isStretchWithOverflow="true">
-				<reportElement x="10" y="106" width="528" height="10" isRemoveLineWhenBlank="true" forecolor="#808080" uuid="4fca905f-00dd-4907-b486-1a9f185d36e1"/>
+				<reportElement x="10" y="68" width="528" height="10" isRemoveLineWhenBlank="true" forecolor="#808080" uuid="4fca905f-00dd-4907-b486-1a9f185d36e1"/>
 				<textElement textAlignment="Left">
 					<font size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{company-header}]]></textFieldExpression>
 			</textField>
 			<image>
-				<reportElement x="10" y="5" width="157" height="100" isRemoveLineWhenBlank="true" uuid="595db5e5-34d0-4777-b953-901ba1ae4104">
+				<reportElement x="10" y="5" width="280" height="60" isRemoveLineWhenBlank="true" uuid="595db5e5-34d0-4777-b953-901ba1ae4104">
 					<printWhenExpression><![CDATA[$F{company-logo}.length()>0]]></printWhenExpression>
 				</reportElement>
 				<imageExpression><![CDATA[$F{company-logo}]]></imageExpression>
