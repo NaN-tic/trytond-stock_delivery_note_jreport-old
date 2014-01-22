@@ -92,6 +92,12 @@
 	<field name="comment-comment" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/comment-comment]]></fieldDescription>
 	</field>
+	<field name="customer-comment_shipment" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/customer-customer/comment_shipment-comment_shipment]]></fieldDescription>
+	</field>
+	<field name="delivery_address-comment_shipment" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/delivery_address-delivery_address/comment_shipment-comment_shipment]]></fieldDescription>
+	</field>
 	<variable name="L" class="java.util.Locale">
 		<variableExpression><![CDATA[$F{customer-lang} != null && $F{customer-lang}.length() == 5 ? new Locale($F{customer-lang}) : ( $F{customer-lang} != null && $F{customer-lang}.length() == 2 ? new Locale($F{customer-lang}) : new Locale('en_US'))]]></variableExpression>
 		<initialValueExpression><![CDATA[$F{customer-lang} != null && $F{customer-lang}.length() == 5 ? new Locale($F{customer-lang}) : ( $F{customer-lang} != null && $F{customer-lang}.length() == 2 ? new Locale($F{customer-lang}) : new Locale('en_US'))]]></initialValueExpression>
@@ -212,7 +218,7 @@
 					<textElement>
 						<font size="9"/>
 					</textElement>
-					<textFieldExpression><![CDATA[$F{comment-comment}]]></textFieldExpression>
+					<textFieldExpression><![CDATA[($F{comment-comment} ? $F{comment-comment}+"\n" : '') + ($F{customer-comment_shipment} ? $F{customer-comment_shipment}+"\n" : '') + ($F{delivery_address-comment_shipment} ? $F{delivery_address-comment_shipment}+"\n" : '')]]></textFieldExpression>
 				</textField>
 			</band>
 		</groupFooter>
