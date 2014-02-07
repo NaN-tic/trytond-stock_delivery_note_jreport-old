@@ -53,6 +53,9 @@
 	<field name="reference-reference" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/reference-reference]]></fieldDescription>
 	</field>
+	<field name="shipment-code" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/code-code]]></fieldDescription>
+	</field>
 	<field name="state-state" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/state-state]]></fieldDescription>
 	</field>
@@ -146,12 +149,12 @@
 				</textField>
 				<textField>
 					<reportElement x="10" y="7" width="228" height="21" forecolor="#010101" uuid="adb3b84f-217e-48ff-bf30-4fb816aca7fe">
-						<printWhenExpression><![CDATA[$F{reference-reference} != '']]></printWhenExpression>
+						<printWhenExpression><![CDATA[$F{shipment-code} != '']]></printWhenExpression>
 					</reportElement>
 					<textElement textAlignment="Left">
 						<font size="16" isBold="true"/>
 					</textElement>
-					<textFieldExpression><![CDATA[tr($V{L},"Delivery Note")+" Nº "+$F{reference-reference}]]></textFieldExpression>
+					<textFieldExpression><![CDATA[tr($V{L},"Delivery Note")+" Nº "+$F{shipment-code}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement x="10" y="29" width="228" height="12" uuid="64c521c0-47ad-4ef0-86bf-9c2b33fa2f8a">
