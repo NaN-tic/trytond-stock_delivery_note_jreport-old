@@ -148,16 +148,16 @@
 					<textFieldExpression><![CDATA[$F{full_address-full_address2}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="10" y="7" width="228" height="21" forecolor="#010101" uuid="adb3b84f-217e-48ff-bf30-4fb816aca7fe">
+					<reportElement x="10" y="7" width="250" height="15" forecolor="#010101" uuid="adb3b84f-217e-48ff-bf30-4fb816aca7fe">
 						<printWhenExpression><![CDATA[$F{shipment-code} != '']]></printWhenExpression>
 					</reportElement>
 					<textElement textAlignment="Left">
-						<font size="16" isBold="true"/>
+						<font size="11" isBold="true"/>
 					</textElement>
-					<textFieldExpression><![CDATA[tr($V{L},"Delivery Note")+" Nº "+$F{shipment-code}]]></textFieldExpression>
+					<textFieldExpression><![CDATA[$F{shipment-code} ? tr($V{L},"Delivery Note")+" Nº "+$F{shipment-code} : tr($V{L},"Delivery Note")]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="10" y="29" width="228" height="12" uuid="64c521c0-47ad-4ef0-86bf-9c2b33fa2f8a">
+					<reportElement x="10" y="24" width="250" height="12" uuid="64c521c0-47ad-4ef0-86bf-9c2b33fa2f8a">
 						<printWhenExpression><![CDATA[$F{effective_date-effective_date} != null]]></printWhenExpression>
 					</reportElement>
 					<textElement>
@@ -176,7 +176,7 @@
 					<textFieldExpression><![CDATA[tr($V{L},"Shipment Address")]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="10" y="42" width="228" height="12" uuid="62ba4bae-9148-4c20-b78f-1aed1d2dc134">
+					<reportElement x="10" y="37" width="250" height="12" uuid="62ba4bae-9148-4c20-b78f-1aed1d2dc134">
 						<printWhenExpression><![CDATA[$F{origin-origin}!= null]]></printWhenExpression>
 					</reportElement>
 					<textElement>
@@ -192,7 +192,7 @@
 					<textFieldExpression><![CDATA[tr($V{L},"Code")]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="10" y="54" width="228" height="12" uuid="958a21fc-e6fe-475f-a183-72ddf25c2232">
+					<reportElement x="10" y="49" width="250" height="12" uuid="958a21fc-e6fe-475f-a183-72ddf25c2232">
 						<printWhenExpression><![CDATA[$F{customer-code}!= null]]></printWhenExpression>
 					</reportElement>
 					<textElement>
@@ -201,7 +201,7 @@
 					<textFieldExpression><![CDATA[tr($V{L},"Customer Code")+": "+$F{customer-code}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="10" y="66" width="228" height="12" uuid="28537064-cf21-4a20-b252-841661e65c77">
+					<reportElement x="10" y="61" width="250" height="12" uuid="28537064-cf21-4a20-b252-841661e65c77">
 						<printWhenExpression><![CDATA[$F{carrier-rec_name}!= null]]></printWhenExpression>
 					</reportElement>
 					<textElement>
