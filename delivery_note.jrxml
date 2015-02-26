@@ -65,7 +65,7 @@
 	<field name="rec_name-rec_name" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/outgoing_moves-outgoing_moves/product-product/rec_name-rec_name]]></fieldDescription>
 	</field>
-	<field name="quantity-quantity" class="java.lang.Number">
+	<field name="quantity-quantity" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/outgoing_moves-outgoing_moves/quantity-quantity]]></fieldDescription>
 	</field>
 	<field name="full_name-full_name" class="java.lang.String">
@@ -252,12 +252,12 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$F{rec_name-rec_name}]]></textFieldExpression>
 			</textField>
-			<textField pattern="#,##0;-#,##0" isBlankWhenNull="false">
+			<textField pattern="" isBlankWhenNull="false">
 				<reportElement x="113" y="2" width="50" height="12" uuid="3ddc68ba-455c-4df0-b3e8-22ecdcf9467e"/>
 				<textElement textAlignment="Left">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{quantity-quantity} ? $F{quantity-quantity} : '0']]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{quantity-quantity} ? $F{company-shipment_qty} ? (int)Double.valueOf($F{quantity-quantity}.trim()).doubleValue() : Double.valueOf($F{quantity-quantity}.trim()).doubleValue() : '0']]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00;-#,##0.00">
 				<reportElement x="13" y="2" width="75" height="12" uuid="4e492720-da5d-4781-812e-3e1a520042a9"/>
