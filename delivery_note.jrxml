@@ -183,7 +183,7 @@
 				</textField>
 				<textField>
 					<reportElement x="10" y="37" width="250" height="12" uuid="62ba4bae-9148-4c20-b78f-1aed1d2dc134">
-						<printWhenExpression><![CDATA[$F{origins-origins}!= null]]></printWhenExpression>
+						<printWhenExpression><![CDATA[$F{origins-origins}!= '']]></printWhenExpression>
 					</reportElement>
 					<textElement>
 						<font size="9"/>
