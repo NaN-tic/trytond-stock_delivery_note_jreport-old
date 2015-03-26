@@ -89,6 +89,12 @@
 	<field name="origin-origin" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/origin-origin]]></fieldDescription>
 	</field>
+	<field name="origins-origins" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/origins-origins]]></fieldDescription>
+	</field>
+	<field name="origin_info-origin_info" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/origin_info-origin_info]]></fieldDescription>
+	</field>
 	<field name="carrier-rec_name" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/carrier-carrier/rec_name-rec_name]]></fieldDescription>
 	</field>
@@ -177,12 +183,12 @@
 				</textField>
 				<textField>
 					<reportElement x="10" y="37" width="250" height="12" uuid="62ba4bae-9148-4c20-b78f-1aed1d2dc134">
-						<printWhenExpression><![CDATA[$F{origin-origin}!= null]]></printWhenExpression>
+						<printWhenExpression><![CDATA[$F{origins-origins}!= null]]></printWhenExpression>
 					</reportElement>
 					<textElement>
 						<font size="9"/>
 					</textElement>
-					<textFieldExpression><![CDATA[tr($V{L},"Source document")+": "+$F{origin-origin}]]></textFieldExpression>
+					<textFieldExpression><![CDATA[tr($V{L},"Source document")+": "+$F{origins-origins}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement x="13" y="141" width="75" height="12" uuid="87281f64-2851-4132-b8fb-7c17da692ec1"/>
@@ -193,7 +199,7 @@
 				</textField>
 				<textField>
 					<reportElement x="10" y="49" width="250" height="12" uuid="958a21fc-e6fe-475f-a183-72ddf25c2232">
-						<printWhenExpression><![CDATA[$F{customer-code}!= null]]></printWhenExpression>
+						<printWhenExpression><![CDATA[$F{customer-code}!= '']]></printWhenExpression>
 					</reportElement>
 					<textElement>
 						<font size="9"/>
@@ -202,7 +208,7 @@
 				</textField>
 				<textField>
 					<reportElement x="10" y="61" width="250" height="12" uuid="28537064-cf21-4a20-b252-841661e65c77">
-						<printWhenExpression><![CDATA[$F{carrier-rec_name}!= null]]></printWhenExpression>
+						<printWhenExpression><![CDATA[$F{carrier-rec_name}!= '']]></printWhenExpression>
 					</reportElement>
 					<textElement>
 						<font size="9"/>
