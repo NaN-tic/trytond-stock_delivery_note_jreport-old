@@ -27,9 +27,9 @@ msgid "Quantity"
 msgstr "Cantidad"
 
 msgctxt "jasper:stock.shipment.out.delivery_note:"
-msgid "Source document"
-msgstr "Documento relacionado"
-
-msgctxt "jasper:stock.shipment.out.delivery_note:"
 msgid "Shipment Address"
 msgstr "Dirección de envío"
+
+msgctxt "jasper:stock.shipment.out.delivery_note:"
+msgid "Source document"
+msgstr "Documento relacionado"
