@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="delivery_note_valued" language="i18ngroovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c91ba985-840e-4136-8813-2033d76ec71b">
 	<property name="ireport.zoom" value="1.6105100000000012"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="49"/>
 	<property name="TRYTON_RELATIONS" value="[&apos;outgoing_moves&apos;]"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/"]]></defaultValueExpression>
@@ -58,6 +58,9 @@
 	</field>
 	<field name="company-lang" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/company-company/party-party/lang-lang/code-code]]></fieldDescription>
+	</field>
+	<field name="company-rgpd" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/company-company/rgpd-rgpd]]></fieldDescription>
 	</field>
 	<field name="reference" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/reference-reference]]></fieldDescription>
@@ -402,7 +405,7 @@
 		</band>
 	</detail>
 	<pageFooter>
-		<band height="89" splitType="Stretch">
+		<band height="105" splitType="Stretch">
 			<rectangle>
 				<reportElement x="529" y="4" width="100" height="20" forecolor="#FEFEFE" backcolor="#A0A0A0" uuid="62880105-e0bb-4319-bdfc-3e51da0fe1ad"/>
 			</rectangle>
@@ -414,42 +417,42 @@
 				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="10" y="6" width="304" height="11" forecolor="#010101" uuid="a4243634-662a-4632-af16-247cff5f4630"/>
+				<reportElement x="10" y="1" width="304" height="11" forecolor="#010101" uuid="a4243634-662a-4632-af16-247cff5f4630"/>
 				<textElement>
 					<font size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{company-name}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="10" y="29" width="304" height="11" forecolor="#808080" uuid="6aa2d678-2060-40ff-9b16-ccbf4736195b"/>
+				<reportElement x="10" y="24" width="304" height="11" forecolor="#808080" uuid="6aa2d678-2060-40ff-9b16-ccbf4736195b"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{company-zip}+" "+$F{company-city}+" "+$F{company-country}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="10" y="17" width="304" height="11" forecolor="#808080" uuid="43bb96d7-9e05-455b-a44b-46f5888e6ab1"/>
+				<reportElement x="10" y="12" width="304" height="11" forecolor="#808080" uuid="43bb96d7-9e05-455b-a44b-46f5888e6ab1"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{company-street}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="9" y="42" width="304" height="11" forecolor="#808080" uuid="db3d3519-1309-4863-89fa-67e673770964"/>
+				<reportElement x="9" y="37" width="304" height="11" forecolor="#808080" uuid="db3d3519-1309-4863-89fa-67e673770964"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{company-vat_code}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="9" y="73" width="535" height="10" isRemoveLineWhenBlank="true" forecolor="#808080" uuid="2ab3736e-c838-4775-85c9-a5ea857f2d3f"/>
+				<reportElement x="9" y="65" width="535" height="40" isRemoveLineWhenBlank="true" forecolor="#808080" uuid="2ab3736e-c838-4775-85c9-a5ea857f2d3f"/>
 				<textElement textAlignment="Center">
 					<font size="7"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{company-footer}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{company-footer}+($F{company-rgpd} ? '\n'+$F{company-rgpd} : '')]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="9" y="54" width="304" height="12" forecolor="#808080" uuid="982d445d-ba23-4aa0-a297-edb6e6a83b00"/>
+				<reportElement x="9" y="49" width="304" height="12" forecolor="#808080" uuid="982d445d-ba23-4aa0-a297-edb6e6a83b00"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
