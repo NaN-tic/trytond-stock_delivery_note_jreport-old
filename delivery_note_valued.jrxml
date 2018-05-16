@@ -59,7 +59,7 @@
 	<field name="company-lang" class="java.lang.String">
 		<fieldDescription><![CDATA[/data/record/company-company/party-party/lang-lang/code-code]]></fieldDescription>
 	</field>
-	<field name="company-rgpd" class="java.lang.String">
+	<field name="company-rgpd" class="java.lang.Object">
 		<fieldDescription><![CDATA[/data/record/company-company/rgpd-rgpd]]></fieldDescription>
 	</field>
 	<field name="reference" class="java.lang.String">
@@ -449,7 +449,7 @@
 				<textElement textAlignment="Center">
 					<font size="7"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{company-footer}+($F{company-rgpd} ? '\n'+$F{company-rgpd} : '')]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{company-footer}+($F{company-rgpd}.get($F{party-lang}) ? '\n'+$F{company-rgpd}.get($F{party-lang}) : '')]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="9" y="49" width="304" height="12" forecolor="#808080" uuid="982d445d-ba23-4aa0-a297-edb6e6a83b00"/>
