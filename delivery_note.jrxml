@@ -353,7 +353,7 @@
 				<textElement textAlignment="Center">
 					<font size="7"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{company-footer}+($F{company-rgpd}.get($F{party-lang}) ? '\n'+$F{company-rgpd}.get($F{party-lang}) : '')]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{company-footer}+($F{company-rgpd}.get($F{customer-lang}) ? '\n'+$F{company-rgpd}.get($F{customer-lang}) : '')]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="9" y="50" width="304" height="12" forecolor="#808080" uuid="57e3bf1c-95db-4683-92fa-e1fba46e5cbb"/>
