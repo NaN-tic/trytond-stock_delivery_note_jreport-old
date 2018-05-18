@@ -6,83 +6,83 @@ msgctxt "field:stock.move,lot_number:"
 msgid "Lot Number"
 msgstr "Número lote"
 
-msgctxt "jasper:stock.shipment.out.delivery_note:"
+msgctxt "report:stock.shipment.out.delivery_note:"
 msgid "Carrier"
 msgstr "Mensajero"
 
-msgctxt "jasper:stock.shipment.out.delivery_note:"
+msgctxt "report:stock.shipment.out.delivery_note:"
 msgid "Code"
 msgstr "Código"
 
-msgctxt "jasper:stock.shipment.out.delivery_note:"
+msgctxt "report:stock.shipment.out.delivery_note:"
 msgid "Customer Code"
 msgstr "Código cliente"
 
-msgctxt "jasper:stock.shipment.out.delivery_note:"
+msgctxt "report:stock.shipment.out.delivery_note:"
 msgid "Delivery Note"
 msgstr "Albarán"
 
-msgctxt "jasper:stock.shipment.out.delivery_note:"
+msgctxt "report:stock.shipment.out.delivery_note:"
 msgid "Description"
 msgstr "Descripción"
 
-msgctxt "jasper:stock.shipment.out.delivery_note:"
+msgctxt "report:stock.shipment.out.delivery_note:"
 msgid "Qty"
 msgstr "Cant."
 
-msgctxt "jasper:stock.shipment.out.delivery_note:"
+msgctxt "report:stock.shipment.out.delivery_note:"
 msgid "Shipment Address"
 msgstr "Dirección de envío"
 
-msgctxt "jasper:stock.shipment.out.delivery_note:"
+msgctxt "report:stock.shipment.out.delivery_note:"
 msgid "Source document"
 msgstr "Documento relacionado"
 
-msgctxt "jasper:stock.shipment.out.delivery_note_valued:"
+msgctxt "report:stock.shipment.out.delivery_note_valued:"
 msgid "Code"
 msgstr "Código"
 
-msgctxt "jasper:stock.shipment.out.delivery_note_valued:"
+msgctxt "report:stock.shipment.out.delivery_note_valued:"
 msgid "Customer Code"
 msgstr "Código cliente"
 
-msgctxt "jasper:stock.shipment.out.delivery_note_valued:"
+msgctxt "report:stock.shipment.out.delivery_note_valued:"
 msgid "Date"
 msgstr "Fecha"
 
-msgctxt "jasper:stock.shipment.out.delivery_note_valued:"
+msgctxt "report:stock.shipment.out.delivery_note_valued:"
 msgid "Delivery Note"
 msgstr "Albarán"
 
-msgctxt "jasper:stock.shipment.out.delivery_note_valued:"
+msgctxt "report:stock.shipment.out.delivery_note_valued:"
 msgid "Description"
 msgstr "Descripción"
 
-msgctxt "jasper:stock.shipment.out.delivery_note_valued:"
+msgctxt "report:stock.shipment.out.delivery_note_valued:"
 msgid "Price"
 msgstr "Precio"
 
-msgctxt "jasper:stock.shipment.out.delivery_note_valued:"
+msgctxt "report:stock.shipment.out.delivery_note_valued:"
 msgid "Qty"
 msgstr "Cant."
 
-msgctxt "jasper:stock.shipment.out.delivery_note_valued:"
+msgctxt "report:stock.shipment.out.delivery_note_valued:"
 msgid "Shipment Address"
 msgstr "Dirección de envío"
 
-msgctxt "jasper:stock.shipment.out.delivery_note_valued:"
+msgctxt "report:stock.shipment.out.delivery_note_valued:"
 msgid "Source document"
 msgstr "Documento relacionado"
 
-msgctxt "jasper:stock.shipment.out.delivery_note_valued:"
+msgctxt "report:stock.shipment.out.delivery_note_valued:"
 msgid "Tax"
 msgstr "Impuesto"
 
-msgctxt "jasper:stock.shipment.out.delivery_note_valued:"
+msgctxt "report:stock.shipment.out.delivery_note_valued:"
 msgid "Total"
 msgstr "Total"
 
-msgctxt "jasper:stock.shipment.out.delivery_note_valued:"
+msgctxt "report:stock.shipment.out.delivery_note_valued:"
 msgid "Untaxed"
 msgstr "Base"
 
